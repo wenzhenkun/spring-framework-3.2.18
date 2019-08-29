@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring</artifactId>
+	<version>3.2.18.RELEASE</version>
+  </parent>
+  <artifactId>spring-aop</artifactId>
+  <name>Spring AOP</name>
+  <description>Spring AOP</description>
+  <developers>
+    <developer>
+      <id>jhoeller</id>
+      <name>Juergen Hoeller</name>
+      <email>jhoeller@gopivotal.com</email>
+    </developer>
+  </developers>
+  <dependencies>
+    <dependency>
+      <groupId>aopalliance</groupId>
+      <artifactId>aopalliance</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.jamonapi</groupId>
+      <artifactId>jamon</artifactId>
+      <version>2.4</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>commons-pool</groupId>
+      <artifactId>commons-pool</artifactId>
+      <version>1.5.7</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.7.4</version>
+      <scope>compile</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>3.2.18.RELEASE</version>
+      <type>test-jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>3.2.18.RELEASE</version>
+      <type>test-jar</type>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>
