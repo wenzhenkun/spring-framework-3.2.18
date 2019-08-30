@@ -9,31 +9,6 @@
   </parent>
   <artifactId>spring-webmvc-portlet</artifactId>
   <name>Spring Web Portlet</name>
-  <description>Spring Web Portlet</description>
-  <url>https://github.com/SpringSource/spring-framework</url>
-  <organization>
-    <name>SpringSource</name>
-    <url>http://springsource.org/spring-framework</url>
-  </organization>
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  <developers>
-    <developer>
-      <id>jhoeller</id>
-      <name>Juergen Hoeller</name>
-      <email>jhoeller@gopivotal.com</email>
-    </developer>
-  </developers>
-  <scm>
-    <connection>scm:git:git://github.com/SpringSource/spring-framework</connection>
-    <developerConnection>scm:git:git://github.com/SpringSource/spring-framework</developerConnection>
-    <url>https://github.com/SpringSource/spring-framework</url>
-  </scm>
   <dependencies>
     <dependency>
       <groupId>commons-fileupload</groupId>
@@ -50,14 +25,9 @@
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>3.2.18.RELEASE</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>3.2.18.RELEASE</version>
+      <type>test-jar</type>
       <scope>compile</scope>
     </dependency>
     <dependency>
