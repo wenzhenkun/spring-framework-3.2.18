@@ -10,30 +10,6 @@
   <artifactId>spring-aspects</artifactId>
   <name>Spring Aspects</name>
   <description>Spring Aspects</description>
-  <url>https://github.com/SpringSource/spring-framework</url>
-  <organization>
-    <name>SpringSource</name>
-    <url>http://springsource.org/spring-framework</url>
-  </organization>
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  <developers>
-    <developer>
-      <id>jhoeller</id>
-      <name>Juergen Hoeller</name>
-      <email>jhoeller@gopivotal.com</email>
-    </developer>
-  </developers>
-  <scm>
-    <connection>scm:git:git://github.com/SpringSource/spring-framework</connection>
-    <developerConnection>scm:git:git://github.com/SpringSource/spring-framework</developerConnection>
-    <url>https://github.com/SpringSource/spring-framework</url>
-  </scm>
   <dependencies>
     <dependency>
       <groupId>org.aspectj</groupId>
@@ -41,6 +17,19 @@
       <version>1.7.4</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjtools</artifactId>
+      <version>1.7.4</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>1.7.4</version>
+      <scope>compile</scope>
+    </dependency>
+    
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aop</artifactId>
@@ -54,6 +43,13 @@
       <version>3.2.18.RELEASE</version>
       <scope>compile</scope>
       <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>3.2.18.RELEASE</version>
+      <scope>test</scope>
+      <type>test-jar</type>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
@@ -90,4 +86,34 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
+  <build>
+  	<plugins>
+<!--       AspectJ 编译插件 -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>aspectj-maven-plugin</artifactId>
+        <version>1.8</version>
+        <configuration>
+          <verbose>true</verbose>
+          <privateScope>true</privateScope>
+          <showWeaveInfo>true</showWeaveInfo>
+          <source>1.8</source>
+          <target>1.8</target>
+          <complianceLevel>1.8</complianceLevel>
+          <verbose>false</verbose>
+          <outxml>true</outxml>
+          <aspectLibraries>
+          </aspectLibraries>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>test-compile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+  	</plugins>
+  </build>
 </project>

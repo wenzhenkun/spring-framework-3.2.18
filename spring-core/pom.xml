@@ -10,11 +10,6 @@
   <artifactId>spring-core</artifactId>
   <name>Spring Core</name>
   <description>Spring Core</description>
-  <scm>
-    <connection>scm:git:git://github.com/SpringSource/spring-framework</connection>
-    <developerConnection>scm:git:git://github.com/SpringSource/spring-framework</developerConnection>
-    <url>https://github.com/SpringSource/spring-framework</url>
-  </scm>
   <dependencies>
     <dependency>
       <groupId>commons-logging</groupId>
@@ -61,4 +56,38 @@
 	</dependency>
 	
   </dependencies>
+  <build>
+  	<plugins>
+<!-- 		  <plugin> -->
+<!-- 		    <groupId>org.apache.maven.plugins</groupId> -->
+<!-- 		    <artifactId>maven-compiler-plugin</artifactId> -->
+<!-- 		    <executions> -->
+<!-- 		      <execution> -->
+<!-- 		        <id>default-testCompile</id> -->
+<!-- 		        <configuration> -->
+<!-- 		          <skip>false</skip> -->
+<!-- 		        </configuration> -->
+<!-- 		        <phase>test-compile</phase> -->
+<!-- 		        <goals> -->
+<!-- 		          <goal>testCompile</goal> -->
+<!-- 		        </goals> -->
+<!-- 		      </execution> -->
+<!-- 		    </executions> -->
+<!-- 		  </plugin> -->
+		  <plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-jar-plugin</artifactId>
+		    <executions>
+		      <execution>
+		        <configuration>
+		          <skip>false</skip>
+		        </configuration>
+		        <goals>
+		          <goal>test-jar</goal>
+		        </goals>
+		      </execution>
+		    </executions>
+		  </plugin>
+  	</plugins>
+  </build>
 </project>
