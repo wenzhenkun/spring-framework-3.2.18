@@ -51,7 +51,6 @@
 		<module>spring-context-support</module>
 		<module>spring-core</module>
 		<module>spring-expression</module>
-		<module>spring-framework-bom</module>
 		<module>spring-instrument</module>
 		<module>spring-instrument-tomcat</module>
 		<module>spring-jdbc</module>
